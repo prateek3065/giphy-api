@@ -1,8 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import GiphyItems from "./GiphyItems";
 const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
+
 export default function Body() {
   const ref = useRef();
+
   const [searchFor, setSearchFor] = useState(() => {
     return "trending";
   });
@@ -62,6 +64,7 @@ export default function Body() {
           flexDirection: "row",
           flexWrap: "wrap",
           backgroundColor: "black",
+          justifyContent: "space-between",
         }}
       >
         <GiphyItems apiResponse={apiResponse} />
