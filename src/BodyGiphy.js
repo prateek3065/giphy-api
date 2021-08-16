@@ -4,7 +4,9 @@ import { useRef } from "react";
 const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
 export default function Body({ setSearchFor, apiResponse, searchFor }) {
   const ref = useRef();
-  if (apiResponse.after !== undefined) return <></>;
+  if (apiResponse === undefined || apiResponse.after !== undefined)
+    return <></>;
+
   function onSubmit() {
     if (ref.current.value === "") return;
     setSearchFor(ref.current.value);
@@ -34,7 +36,7 @@ export default function Body({ setSearchFor, apiResponse, searchFor }) {
         ></input>
         <button
           style={{ height: "40px", marginRight: "10px", borderRadius: "10px" }}
-          onClick={onSubmit}
+          onClick={() => onSubmit()}
         >
           enter
         </button>
