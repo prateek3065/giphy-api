@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,gBACE,wBAA2B,CAC3B,WACF,CACA,4BACE,SAAU,CACV,eAAgB,CAChB,cACF","file":"main.ba4faa21.chunk.css","sourcesContent":[".each-gif:hover {\n  background-color: lightblue;\n  margin: 20px;\n}\n.link-to-another-site:hover {\n  color: red;\n  font-size: large;\n  cursor: pointer;\n}\n"]}
