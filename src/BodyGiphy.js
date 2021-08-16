@@ -1,34 +1,16 @@
-import React, { useRef, useState, useEffect } from "react";
 import GiphyItems from "./GiphyItems";
+import { useRef } from "react";
+
 const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
-
-export default function Body() {
+export default function Body({ setSearchFor, apiResponse, searchFor }) {
   const ref = useRef();
-
-  const [searchFor, setSearchFor] = useState(() => {
-    return "trending";
-  });
-  const [apiResponse, setApiResponse] = useState(() => {
-    return [];
-  });
+  if (apiResponse.after !== undefined) return <></>;
   function onSubmit() {
     if (ref.current.value === "") return;
     setSearchFor(ref.current.value);
+
     ref.current.value = "";
   }
-  useEffect(() => {
-    fetch(
-      `https://api.giphy.com/v1/gifs/search?api_key=${API_Key}&limit=40&q=${searchFor}`
-    )
-      .then((res) => res.json())
-      .then((res) => {
-        // console.log(searchFor);
-        setApiResponse(res);
-      })
-      .catch((error) => {
-        console.log(`ERROR : ${error}`);
-      });
-  }, [searchFor]);
 
   return (
     <div

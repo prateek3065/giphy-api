@@ -2,3 +2,8 @@
   background-color: lightblue;
   margin: 20px;
 }
+.link-to-another-site:hover {
+  color: red;
+  font-size: large;
+  cursor: pointer;
+}
