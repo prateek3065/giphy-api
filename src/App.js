@@ -1,7 +1,7 @@
 import Header from "./Header.js";
 import BodyGiphy from "./BodyGiphy.js";
 import BodyReddit from "./BodyReddit";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
 function App() {
   const [searchFor, setSearchFor] = useState(() => {

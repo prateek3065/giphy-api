@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
+//const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
 
 export default function Header({ siteName, setSiteName }) {
   function handleSiteChange() {

@@ -1,7 +1,7 @@
 import GiphyItems from "./GiphyItems";
 import { useRef } from "react";
 
-const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
+//const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
 export default function Body({ setSearchFor, apiResponse, searchFor }) {
   const ref = useRef();
   if (apiResponse === undefined || apiResponse.after !== undefined)
