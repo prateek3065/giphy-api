@@ -17,7 +17,6 @@ export default function GiphyItems({ apiResponse }) {
             key={uuidv4()}
             style={{
               border: "2px solid white",
-              width: "15%",
             }}
           >
             <div

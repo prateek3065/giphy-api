@@ -1,6 +1,6 @@
 import GiphyItems from "./GiphyItems";
 import { useRef } from "react";
-
+import "./App.css";
 //const API_Key = "uUC5IzSPpIZ21XOrvLjAoS689uAfPI55";
 export default function Body({ setSearchFor, apiResponse, searchFor }) {
   const ref = useRef();
@@ -43,6 +43,7 @@ export default function Body({ setSearchFor, apiResponse, searchFor }) {
       </div>
 
       <div
+        className="gif-div"
         style={{
           display: "flex",
           flexDirection: "row",
